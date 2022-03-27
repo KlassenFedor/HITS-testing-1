@@ -208,7 +208,3 @@ class StringByDegreeNumbersAndRatio(unittest.TestCase):
     def test_doing_string_by_degree_of_numbers_and_ratio_by_float_ratio_raise_exception(self):
         with self.assertRaises(ValueError):
             get_new_string_by_degree_a_b_and_ratio(2, 3, 2.1)
-
-
-if __name__ == '__main__':
-    unittest.main()
