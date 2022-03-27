@@ -133,6 +133,7 @@ class Formula(unittest.TestCase):
 
 
 class StringByDegreeNumbersAndRatio(unittest.TestCase):
+
     # positive tests:
 
     def test_doing_string_by_degree_of_numbers_and_ratio_by_integers(self):
