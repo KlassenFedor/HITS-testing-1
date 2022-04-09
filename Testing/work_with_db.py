@@ -6,7 +6,7 @@ def insert_value(number):  # adding new answer in db
     try:
         answer = formula(number)
     except Exception:
-        return "wrong data"
+        return "Wrong data"
     if check_if_same_answer_exists(number):
         return "Successfully"
     else:

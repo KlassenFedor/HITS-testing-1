@@ -1,8 +1,10 @@
 import unittest
-from SQLite_Integration import *
+from work_with_db import *
 
 
 class InsertData(unittest.TestCase):
+
+    insert_value(2)
 
     def test_inserting_correct_data(self):
         answer = 'Successfully'

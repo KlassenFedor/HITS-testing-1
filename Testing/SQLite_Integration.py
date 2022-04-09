@@ -13,7 +13,7 @@ def create_connection(path):
     return connection
 
 
-new_connection = create_connection("./my_test_db.db")
+new_connection = create_connection("DB/my_db.db")
 
 cur = new_connection.cursor()
 
