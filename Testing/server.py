@@ -19,9 +19,12 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         content_len = int(self.headers.get('Content-Length'))
         post_body = json.loads(self.rfile.read(content_len))
         print(post_body)
-        if bool(post_body['checked']):
-            insert_value(int(post_body['number']))
-        answer = get_value(int(post_body['number']))
+        try:
+            if bool(post_body['checked']):
+                insert_value(int(post_body['number']))
+            answer = get_value(int(post_body['number']))
+        except Exception:
+            answer = "Something went wrong, please check your data"
         self.send_response(200)
         self._send_cors_headers()
         self.send_header('Content-type', 'text/html')
